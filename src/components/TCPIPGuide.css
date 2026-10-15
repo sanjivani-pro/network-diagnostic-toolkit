@@ -1,0 +1,109 @@
+
+.tcpip-guide {
+  box-sizing: border-box;
+  width: min(760px, 100%);
+  margin: 32px auto;
+  padding: 24px;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 14px;
+  background: rgba(127, 127, 127, 0.05);
+  color: inherit;
+  text-align: left;
+}
+
+.tcpip-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.tcpip-description {
+  margin: 0 0 20px;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+.tcpip-flow {
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 8px;
+  background: rgba(13, 148, 136, 0.14);
+  color: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.tcpip-layers {
+  display: grid;
+  gap: 14px;
+}
+
+.tcpip-layer {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 10px;
+}
+
+.tcpip-layer-number {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(13, 148, 136, 0.16);
+  font-weight: 700;
+}
+
+.tcpip-layer-content {
+  min-width: 0;
+}
+
+.tcpip-layer-content h3 {
+  margin: 2px 0 8px;
+  font-size: 1.1rem;
+}
+
+.tcpip-layer-content p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.tcpip-protocols {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.tcpip-example {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.tcpip-note {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(127, 127, 127, 0.3);
+  line-height: 1.6;
+}
+
+@media (max-width: 520px) {
+  .tcpip-guide {
+    padding: 18px;
+  }
+
+  .tcpip-layer {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .tcpip-layer-number {
+    width: 34px;
+    height: 34px;
+  }
+}

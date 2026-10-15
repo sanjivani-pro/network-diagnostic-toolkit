@@ -1,0 +1,150 @@
+
+.dns-tool {
+  box-sizing: border-box;
+  width: min(760px, 100%);
+  margin: 32px auto;
+  padding: 24px;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 14px;
+  background: rgba(127, 127, 127, 0.05);
+  color: inherit;
+  text-align: left;
+}
+
+.dns-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.dns-description {
+  margin: 0 0 24px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.dns-form {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(120px, 1fr);
+  gap: 16px;
+  align-items: end;
+}
+
+.dns-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dns-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.dns-field input,
+.dns-field select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(127, 127, 127, 0.5);
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.dns-field select option {
+  background: #ffffff;
+  color: #111827;
+}
+
+.dns-button {
+  grid-column: 1 / -1;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dns-button:hover:not(:disabled) {
+  background: #115e59;
+}
+
+.dns-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.dns-error {
+  margin-top: 18px;
+  color: #dc2626;
+}
+
+.dns-info {
+  margin-top: 18px;
+  color: inherit;
+}
+
+.dns-results {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(127, 127, 127, 0.3);
+}
+
+.dns-results h3 {
+  margin: 0 0 12px;
+}
+
+.dns-result-summary {
+  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+}
+
+.dns-record-list {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.dns-record-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 8px;
+}
+
+.dns-record-badge {
+  flex-shrink: 0;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: rgba(13, 148, 136, 0.15);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.dns-record-value {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 520px) {
+  .dns-tool {
+    padding: 18px;
+  }
+
+  .dns-form {
+    grid-template-columns: 1fr;
+  }
+
+  .dns-button {
+    grid-column: auto;
+  }
+}

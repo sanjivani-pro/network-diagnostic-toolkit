@@ -1,0 +1,153 @@
+
+.port-checker {
+  box-sizing: border-box;
+  width: min(760px, 100%);
+  margin: 32px auto;
+  padding: 24px;
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 14px;
+  background: rgba(127, 127, 127, 0.05);
+  color: inherit;
+  text-align: left;
+}
+
+.port-checker-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.port-checker-description {
+  margin: 0 0 24px;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+.port-checker-form {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(120px, 1fr);
+  gap: 16px;
+}
+
+.port-checker-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.port-checker-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.port-checker-field input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid rgba(127, 127, 127, 0.5);
+  border-radius: 7px;
+  background: #e7efff;
+  color: #111827;
+  font: inherit;
+}
+
+.port-checker-button {
+  grid-column: 1 / -1;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #0f766e;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.port-checker-button:hover:not(:disabled) {
+  background: #115e59;
+}
+
+.port-checker-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.port-checker-error {
+  margin-top: 18px;
+  color: #dc2626;
+}
+
+.port-checker-results {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(127, 127, 127, 0.3);
+}
+
+.port-checker-results h3 {
+  margin: 0 0 14px;
+}
+
+.port-checker-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.port-checker-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 8px;
+}
+
+.port-checker-item span {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.port-checker-item strong {
+  overflow-wrap: anywhere;
+}
+
+.port-status-open {
+  color: #34d399;
+}
+
+.port-status-closed {
+  color: #f87171;
+}
+
+.port-status-inconclusive {
+  color: #fbbf24;
+}
+
+.port-checker-message,
+.port-checker-note {
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.port-checker-note {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 520px) {
+  .port-checker {
+    padding: 18px;
+  }
+
+  .port-checker-form,
+  .port-checker-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .port-checker-button {
+    grid-column: auto;
+  }
+}
